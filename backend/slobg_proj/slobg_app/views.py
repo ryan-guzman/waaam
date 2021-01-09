@@ -91,7 +91,7 @@ def export_contacts(request, start_date, end_date):
         start_date, end_date)
 
     writer = csv.writer(response)
-    writer.writerow(['emails'])
+    writer.writerow(['Email', 'Phone', 'Mailing Address'])
 
     if(request.user.is_superuser):
         users = User.objects.all().filter(
