@@ -15,10 +15,12 @@ SERVER_EMAIL = 'no-reply@Hack4Impact.com'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-print(EMAIL_HOST_USER)
-print(EMAIL_HOST_PASSWORD)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default=os.environ.get('EMAIL_HOST_USER')) #os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default=os.environ.get('EMAIL_HOST_PASSWORD')) #os.environ.get('EMAIL_HOST_PASSWORD')
+
+# print(EMAIL_HOST_USER)
+# print(EMAIL_HOST_PASSWORD)
+# print(SECRET_KEY)
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

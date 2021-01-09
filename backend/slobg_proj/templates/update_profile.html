@@ -110,19 +110,7 @@
             {% endfor %}
          </div>
       </p>
-      <p>
-         <div class="align-fields">
-            <div class="align-labels">
-            {{ profile_form.birth_date.label_tag }} <br/>
-            </div>
-            <div class="align-labels">
-            {{ profile_form.birth_date }} 
-            </div>
-            {% for error in profile_form.birth_date.errors %}
-            <p style="color: red">{{ error }}</p>
-            {% endfor %}
-         </div>
-      </p>
+
       <p>
          <div class="align-fields">
             <div class="align-labels">
