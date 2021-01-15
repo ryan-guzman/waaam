@@ -96,12 +96,12 @@ def export_contacts(request, start_date, end_date):
     writer = csv.writer(response)
     writer.writerow(['Email', 'Phone', 'Mailing Address'])
 
-    if(request.user.is_superuser):
+    if request.user.is_superuser:
         users = User.objects.all().filter(
             date_joined__range=[start_date, end_date + datetime.timedelta(days=1)])
     else:
         users = User.objects.filter(
-            owner=request.user, date_joined__range=[start_date, end_date])
+            owner=request.user, date_joined__range=[start_date, end_date + datetime.timedelta(days=1)])
 
     for user in users:
         writer.writerow([user.email, user.profile.phone])
