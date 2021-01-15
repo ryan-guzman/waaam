@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+import datetime
 
 from .forms import SignUpForm, ProfileForm, VolunteerRecordForm, FilterForm
 from .models import VolunteerRecord, ActivityChoice
@@ -83,7 +84,9 @@ def export_contact(request):
         form = FilterForm()
     return render(request, 'export_contact.html', {'form': form})
 
-
+"""
+Helper function for exporting volunteer records to a CSV
+"""
 def export_contacts(request, start_date, end_date):
     print(request)
     response = HttpResponse(content_type='text/csv')
@@ -95,7 +98,7 @@ def export_contacts(request, start_date, end_date):
 
     if(request.user.is_superuser):
         users = User.objects.all().filter(
-            date_joined__range=[start_date, end_date])
+            date_joined__range=[start_date, end_date + datetime.timedelta(days=1)])
     else:
         users = User.objects.filter(
             owner=request.user, date_joined__range=[start_date, end_date])
@@ -180,17 +183,6 @@ def add_individual_hours(request):
 
     return render(request, "add_individual_hours.html", {"form": form, "user": request.user})
 
-
-# @login_required
-# def add_group_hours(request):
-#    form = GroupVolunteerForm(request.POST or None)
-#    if form.is_valid():
-#       form = GroupVolunteerForm()
-#       form.save()
-#    context = {
-#       'form': form
-#    }
-#    return render(request, 'group_sign_in.html', {})
 
 @login_required
 def history(request):
