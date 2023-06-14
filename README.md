@@ -1,8 +1,7 @@
 # WAAAM volunteer Hour Tracker
 
-### A volunteer hour tracker made for the <a href="https://www.slobg.org/" target="_blank">SLO Botanical Garden nonprofit</a>.
+### A volunteer hour tracker made for the <a href="[https://www.slobg.org/](https://www.waaamuseum.org/)" target="_blank">Western Antique Auto and Airplane Museum</a>.
 
-![User View](https://github.com/eric-newcomer/slobg-track/blob/master/backend/slobg_proj/slobg_app/static/slobg_app/img/user-view.png)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -22,15 +21,9 @@ The purpose of this application was to improve the volunteer tracking process at
 
 ### Getting Started for Developers
 
-#### Clone the repository
-``` git clone https://github.com/hack4impact-calpoly/slobg-track.git ```
-```cd slobg-track/```
-
 #### Install requirements
 0. [Install Python](https://www.python.org/downloads/) (if you don't have it for some reason)
 1. Clone the repo
-2. [Install pip](https://pip.pypa.io/en/stable/installing/)
-3. [Install Django](https://docs.djangoproject.com/en/3.0/topics/install/)
 4. Install all project packages using `pip install -r requirements.txt` (make sure you are in the project root folder).
 
 #### Run the app
