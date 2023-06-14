@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block pageContent %}
+{% block content %}
+
 <div class="center-page center-text">
     <div class="form-group">
         <h1 class="hero">Shift Tracker</h1>
@@ -10,29 +11,7 @@
     <form method="POST">
         {% csrf_token %}
         {% crispy form %}
-{#        <div class="align-fields-general">#}
-{#            {% for field in form %}#}
-{##}
-{#            <p>#}
-{#                <div class="align-labels">#}
-{#                    {{ field.label_tag }} <br/>#}
-{#                </div>#}
-{#                <div class="align-fields">#}
-{#                    {{ field }} #}
-{#                </div>#}
-{#            </p>#}
-{##}
-{#            {% endfor %}#}
-{##}
-{#        </div>#}
-{#        <div class="button-holder custom-margins">#}
-{#            <button class="btn wide-btn btn-primary" type="submit" form="form">Submit</button>#}
-{#        </div>#}
     </form>
 </div>
 
-<script type="text/javascript">
-    $('.basicAutoComplete').autoComplete();
-</script>
-
-{% endblock pageContent%}
+{% endblock content %}

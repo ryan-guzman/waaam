@@ -21,16 +21,11 @@ from . import views
 
 urlpatterns = [
     path('', views.add_individual_hours, name="add_individual_hours"),
-    # path('add_group_hours/', views.add_group_hours, name="add_group_hours"),
-    path('dashboard/', views.history, name="history"), #all
+    path('dashboard/', views.history, name="history"),
     path('export/', views.export, name='export'),
     path('export/', views.export_csv, name='export_csv'),
     path('success/', views.success, name="success"),
-    path('profile/', views.profile, name="profile"),
-    path('update-profile/', views.update_profile, name="update_profile"),
-    path('export_contact/', views.export_contact, name='export_contact'),
     path('add-volunteer/', views.add_volunteer, name='add_volunteer'),
     path('users/', views.json, name='json'),
-    path("select2/", include("django_select2.urls")),
     path("signup/", views.signup, name="signup"),
 ]

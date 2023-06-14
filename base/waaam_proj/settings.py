@@ -9,7 +9,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
-    'waaam_app.apps.SlobgAppConfig',
+    'waaam_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,13 +80,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'waaam_app/static')
+    os.path.join(BASE_DIR, 'templates\\static')
 ]
 STATIC_URL = '/static/'
 LOGIN_URL = '/login/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'logout'
 

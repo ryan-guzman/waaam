@@ -24,9 +24,8 @@
 {% endblock pageHeader%}
 
 <body>
-    <!-- NAVBAR HERE -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-        <a href="/"><img class=" nav-bar-image" src="{% static 'waaam_app/img/slobg_logo.png' %}" height="68px"></a>
+        <a href="/"><img class=" nav-bar-image" src="{% static 'waaam_app/img/waaam_logo.png' %}" height="68px"></a>
         <button class=" inverted navbar-toggler" style="margin-top: -20px" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,7 +67,7 @@
             </ul> -->
       </nav>
     <div>
-        {% block pageContent %}{% endblock pageContent %}
+        {% block content %}{% endblock content %}
     </div>
 </body>
 
