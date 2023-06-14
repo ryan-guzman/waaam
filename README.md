@@ -15,8 +15,7 @@
 ### Overview
 
 #### Purpose
-The purpose of this application was to improve the volunteer tracking process at the SLO Botanical Garden nonprofit. Previously, volunteer information was written down and manually inputted into spreadsheets by nonprofit supervisors. In order to streamline this task, the team built a volunteer management system that allows volunteers to record their hours and view their volunteer history, all while allowing nonprofit supervisors to keep this information and filter/export it when necessary. 
-
+The purpose of this application was to improve the volunteer tracking process at WAAAM - Western Antique Auto and Airplane Museum
 
 
 ### Getting Started for Developers
