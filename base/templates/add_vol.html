@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block pageContent %}
+<body>
+  <div class="center-page center-text">
+    <form method="post">
+      {% csrf_token %}
+      {{ form|crispy }}
+{#      <div class="align-fields-general">#}
+{#        {% for field in form %}#}
+{#          <p>#}
+{#            <div class="align-fields">#}
+{#              <div class="align-labels">#}
+{#                {{ field.label_tag }} <br/>#}
+{##}
+{#              </div>#}
+{#              <div class="align-labels">#}
+{#                {{ field }}#}
+{#              </div>#}
+{#              {% for error in field.errors %}#}
+{#                <p style="color: red">{{ error }}</p>#}
+{#              {% endfor %}#}
+{#            </div>#}
+{#          </p>#}
+{#        {% endfor %}#}
+{##}
+{#      </div>#}
+{#      <div class="button-holder custom-margins">#}
+{#        <button class="btn btn-primary" type="submit">Add User</button>#}
+{#      </div>#}
+
+        <button class="btn btn-info" type="submit">Submit</button>
+    </form>
+
+
+  </div>
+</body>
+{% endblock %}
